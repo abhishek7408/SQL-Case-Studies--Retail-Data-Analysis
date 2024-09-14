@@ -2,7 +2,7 @@
 
 
  ***---------------------------------------------Data Prepration & Understanding----------------------------------------------------***
- -- 1- What is the total number of rows in each of the 3 tables in the database?
+# -- 1- What is the total number of rows in each of the 3 tables in the database?
 # --2- What is the total no of transactions that have a return?
 # --3- As you would have noticed, the dates provided across the datasets are not in a correct format. As first step is to convert the date variable into a valid date formats before proceeding ahead. 
 # --4- What is the time range of the transactions of data available for analysis? Show the output in number of days, month and years simultaneously in different columns.
