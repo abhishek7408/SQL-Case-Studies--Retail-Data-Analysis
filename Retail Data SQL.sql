@@ -160,7 +160,7 @@ LEFT JOIN Prod_cat_info AS Products
 ON Trans.prod_cat_code = Products.prod_cat_code
 AND Trans.prod_subcat_code = Products.prod_sub_cat_code
 WHERE Products.prod_cat IN ('Electronics', 'Clothing')
-AND Trans.Store_type = 'Flagship store'
+AND Trans.Store_type = 'Flagship store';
 
 
 /* 9-What is the total revenue generated from "Male" customers in  "Electronics" category? Output Should display total revenue by
