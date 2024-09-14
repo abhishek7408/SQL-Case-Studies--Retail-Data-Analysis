@@ -102,7 +102,7 @@ ORDER BY Maximum_Customer DESC;
 SELECT Prod_Cat, COUNT(Prod_Subcat) AS Total_Sub_Category 
 FROM Prod_cat_info
 WHERE prod_cat = 'Books'
-GROUP BY prod_cat
+GROUP BY prod_cat;
 
 --5- What is maximum quantity of products ever ordered?
 SELECT TOP 1 Products.Prod_cat, COUNT(CAST(Trans.Qty AS FLOAT)) AS Quantity
@@ -111,7 +111,7 @@ INNER JOIN Prod_cat_info AS Products
 ON Trans.prod_cat_code = Products.prod_cat_code
 AND Products.prod_sub_cat_code = Trans.prod_subcat_code
 GROUP BY Products.prod_cat
-ORDER BY Quantity DESC
+ORDER BY Quantity DESC;
 
 -- 6- What is the net total revenue generated in categories Electronics and Books?
 
@@ -121,7 +121,7 @@ FROM Transactions AS Trans
 INNER JOIN Prod_cat_info AS Products
 ON Trans.prod_cat_code = Products.prod_cat_code
 WHERE Products.prod_cat IN ('Electronics', 'Books')
-GROUP BY Products.prod_cat
+GROUP BY Products.prod_cat;
 
 --Method-2
 SELECT Products.Prod_Cat, SUM(CAST(Trans.Total_amt AS DECIMAL(18,2))) AS Revenue
